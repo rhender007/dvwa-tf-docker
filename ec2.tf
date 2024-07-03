@@ -9,6 +9,7 @@ resource "aws_instance" "dvwa_instance" {
               #!/bin/bash
               sudo yum update -y
               sudo yum install git -y
+sudo yum install openssl openssl-devel -y
               # sudo amazon-linux-extras install docker -y
               sudo yum install docker -y
               sudo service docker start
