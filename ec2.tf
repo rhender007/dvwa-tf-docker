@@ -11,6 +11,7 @@ resource "aws_instance" "dvwa_instance" {
               sudo yum install python -y
               sudo yum install git -y
               sudo yum install openssl openssl-devel -y
+              sudo yum install libxcrypt-compat -y
               # sudo amazon-linux-extras install docker -y
               sudo yum install docker -y
               sudo service docker start
