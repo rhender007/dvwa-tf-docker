@@ -2,7 +2,7 @@
 FROM php:7.4-apache
 
 # Install dependencies
-RUN apt-get update && apt-get install -y \
+RUN yum update && yum install -y \
     git \
     mariadb-client \
     && docker-php-ext-install mysqli
