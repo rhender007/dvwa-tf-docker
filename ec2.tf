@@ -22,7 +22,7 @@ resource "aws_instance" "dvwa_instance" {
               sudo chmod +x /usr/local/bin/docker-compose
 
               # Clone DVWA and run with Docker Compose
-              git clone https://github.com/rhender007/dvwa-tf-docker.git /home/ec2-user/terraform-dvwa
+              git clone https://github.com/rhender007/dvwa-tf-docker.git /home/ssm-user/terraform-dvwa
               cd /home/ec2-user/terraform-dvwa
               sudo /usr/local/bin/docker-compose up -d
               EOF
