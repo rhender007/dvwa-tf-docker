@@ -8,6 +8,7 @@ resource "aws_instance" "dvwa_instance" {
   user_data = <<-EOF
               #!/bin/bash
               sudo yum update -y
+              sudo yum install git -y
               # sudo amazon-linux-extras install docker -y
               sudo yum install docker -y
               sudo service docker start
@@ -19,7 +20,7 @@ resource "aws_instance" "dvwa_instance" {
               sudo chmod +x /usr/local/bin/docker-compose
 
               # Clone DVWA and run with Docker Compose
-              git clone https://github.com/your_github_username/terraform-dvwa.git /home/ec2-user/terraform-dvwa
+              git clone https://github.com/rhender007/dvwa-tf-docker.git /home/ec2-user/terraform-dvwa
               cd /home/ec2-user/terraform-dvwa
               sudo /usr/local/bin/docker-compose up -d
               EOF
